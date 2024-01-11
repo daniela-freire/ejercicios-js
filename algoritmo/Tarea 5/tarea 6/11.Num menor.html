@@ -1,0 +1,30 @@
+<script>
+
+    // Desarrolle un algoritmo que permita leer tres valores y almacenarlos en las variables A, B, y C
+    // respectivamente. El algoritmo debe indicar cuál es el menor. Asumiendo que los tres valores
+    // introducidos por el teclado son valores distintos. 
+
+    let a = Number(prompt('Ingrese el valor de A'))
+    let b = Number(prompt('Ingrese el valor de B'))
+    let c = Number(prompt('Ingrese el valor de C'))
+
+    if (a != b && b != c && a != c) {
+        if (a > b) {
+            console.log(b)
+            document.write('${b} es el numero menor')
+        } else {
+            console.log(a)
+            document.write('${a} es el numero menor')
+        }
+        if (c < a && c < b) {
+            console.log(c)
+            document.write('${c} es el numero menor')
+        }
+    } else {
+        console.log('Ingrese valores diferentes')
+        document.write('Ingrese valores diferentes')
+
+    }
+
+
+</script>

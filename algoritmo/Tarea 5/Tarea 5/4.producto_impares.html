@@ -1,0 +1,21 @@
+<script>
+
+    //  calcule y escriba la suma de los pares y el producto de
+    // los impares.
+
+    let num, suma_pares = 0
+    let prod_impares = 1
+    while (num != 0) {
+        num = Number(prompt('Ingrese un numero'))
+        if (num % 2 == 0) {
+            suma_pares = suma_pares + num
+        } else {
+            prod_impares = prod_impares * num
+        }
+    }
+    document.write('producto de impares: ', prod_impares, '<br>')
+    console.log('producto de impares: ', prod_impares)
+    document.write('suma de pares: ', suma_pares, '<br>')
+    console.log(); ('suma de pares: ', suma_pares)
+    
+</script>

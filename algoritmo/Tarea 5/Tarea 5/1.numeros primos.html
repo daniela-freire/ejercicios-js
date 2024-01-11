@@ -1,0 +1,22 @@
+<script>
+
+    //   determinar si es
+    // primo o no primo.
+
+    let num = 0
+    let c = 2
+    num = Number(prompt('Ingrese un numero'))
+    while (num % c != 0 && num > 1) {
+        c++
+    }
+    if (c == num) {
+        document.write(num, ' Es primo')
+        console.log(num, ' Es primo')
+    } else {
+        document.write(num, ' No es primo')
+        console.log(num, ' No es primo')
+    }
+
+
+
+</script>

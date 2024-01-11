@@ -1,0 +1,17 @@
+<script>
+
+    // Se ingresa por teclado nombre del alumno, nota1, nota2 y nota 3, calcular la suma y el
+    // promedio total de las calificaciones, presentar por pantalla el resultado.
+
+    let alumno = prompt('nombre del alumno')
+    let nota1 = Number(prompt('ingrese nota 1'))
+    let nota2 = Number(prompt('ingrese nota 2'))
+    let nota3 = Number(prompt('ingrese nota 3'))
+    let suma = 0
+    let promedio = 0
+    suma = nota1 + nota2 + nota3
+    promedio = suma / 3
+
+    console.log('El alumno/a ${alumno} tiene ${suma} en la suma de sus notas y el promedio es ${promedio}')
+    document.write('El alumno/a ${alumno} tiene ${suma} en la suma de sus notas y el promedio es ${promedio}')
+</script>

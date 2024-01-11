@@ -1,0 +1,54 @@
+
+<script>
+    //un numero perfecto es un numero cuyos divisores menores a el
+//mismo (incluyendo 1) si se suman dan como resultado el mismo número.
+
+    let num1 = Number(prompt('Ingrese un número para verificar si es perfecto'));
+
+    // Verificar si el número ingresado es perfecto
+    let sumaDivisores1 = 1; // Inicializamos la suma con 1 porque todos los números son divisibles por 1
+    for (let i = 2; i <= Math.sqrt(num1); i++) {
+        if (num1 % i === 0) {
+            sumaDivisores1 += i;
+
+            // Si los divisores son diferentes, sumamos el otro divisor
+        if (i !== num1 / i) {
+                sumaDivisores1 += num1 / i;
+            }
+        }
+    }
+
+        if (sumaDivisores1 === num1) {
+        document.write(num1, ' es un número perfecto.<br>');
+        console.log(num1, ' es un número perfecto.');
+    } else {
+        document.write(num1, ' no es un número perfecto.<br>');
+        console.log(num1, ' no es un número perfecto.');
+    }
+
+    // Imprimir los primeros tres números perfectos
+    let contador = 0;
+    let candidato = 2; // Empezamos con el primer número primo
+    while (contador < 3) {
+    let numPerfectoCandidato = Math.pow(2, candidato - 1) * (Math.pow(2, candidato) - 1); // Math.pow se usa para la potencia
+
+        let sumaDivisoresCandidato = 1;
+        for (let i = 2; i <= Math.sqrt(numPerfectoCandidato); i++) {
+            if (numPerfectoCandidato % i === 0) {
+                sumaDivisoresCandidato += i;
+
+                // Si los divisores son diferentes, sumamos el otro divisor
+            if (i !== numPerfectoCandidato / i) {
+                    sumaDivisoresCandidato += numPerfectoCandidato / i;
+                }
+            }
+        }
+
+            if (sumaDivisoresCandidato === numPerfectoCandidato) {
+               document.write('Número perfecto: ', numPerfectoCandidato, '<br>');
+               contador++;
+        }
+
+               candidato++;
+    }
+</script>

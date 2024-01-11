@@ -1,0 +1,40 @@
+<script>
+    //Realizar un algoritmo que imprima los 10 primeros primos y contar cuantos  están entre  1 - 10 y  15 – 25 
+    
+    let cont_num = 2; 
+    let num_primos_encontrados = 0;
+    let primos_1_10 = 0;
+    let primos_15_25 = 0;
+
+    while (num_primos_encontrados < 10) {
+        let esPrimo = true;
+
+        for (let i = 2; i < cont_num; i++) {
+            if (cont_num % i === 0) {
+                esPrimo = false;
+                break;
+            }
+        }
+
+        if (esPrimo) {
+            document.write(cont_num, ' es primo<br>');
+            console.log(cont_num, ' es primo');
+            num_primos_encontrados++;
+
+            // Contar primos entre 1 y 10
+            if (cont_num >= 1 && cont_num <= 10) {
+                primos_1_10++;
+            }
+
+            // Contar primos entre 15 y 25
+            if (cont_num >= 15 && cont_num <= 25) {
+                primos_15_25++;
+            }
+        }
+
+        cont_num++;
+    }
+
+    document.write('<br>Contar primos entre [1 - 10]: ', primos_1_10, '<br>');
+    document.write('Contar primos entre [15 - 25]: ', primos_15_25, '<br>');
+</script>

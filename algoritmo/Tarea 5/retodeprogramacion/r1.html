@@ -1,0 +1,36 @@
+<script>
+  function verificarPalindromo() {
+    var texto = "afoolishconsistencyisthehobgoblinoflittlemindsadoredbylittlestatesmenandphilosophersanddivineswithconsistencyagreatsoulhassimplynothingtodohemayaswellconcernhimselfwithhisshadowonthewallspeakwhatyouthinknowinhardwordsandtomorrowspeakwhattomorrowthinksinhardwordsagainthoughitcontradicteverythingyousaidtodayahsoyoushallbesuretobemisunderstoodisitsobadthentobemisunderstoodpythagoraswasmisunderstoodandsocratesandjesusandlutherandcopernicusandgalileoandnewtonandeverypureandwisespiritthatevertookfleshtobegreatistobemisunderstood";
+
+    // Invertir la cadena
+    var invertida = texto.split('').reverse().join('');
+
+    // Verificar si la cadena original es igual a la cadena invertida
+    var esPalindromo = texto === invertida;
+
+    // Mostrar el resultado en el HTML
+    document.getElementById("resultado").innerHTML = esPalindromo
+      ? "La cadena es un palíndromo."
+      : "La cadena no es un palíndromo.";
+  }
+</script>
+</head>
+<body>
+
+<h1>Análisis y Desarrollo</h1>
+
+<button onclick="verificarPalindromo()">Verificar Palíndromo</button>
+
+<div id="resultado"></div>
+
+</body>
+</html>
+  
+
+
+
+
+
+
+
+

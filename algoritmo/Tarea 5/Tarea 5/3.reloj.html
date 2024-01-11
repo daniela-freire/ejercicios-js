@@ -1,0 +1,30 @@
+<script>
+
+    // Hacer un diagrama de flujo que simule un reloj.
+    // Ingresar h= Hora, m= Minuto, s= Segundo
+    // Ejemplo: 02:59:59 simular que incrementa un segundo -> Segundo + 1.
+    // Respuesta: 03:00:00 
+
+    let h = 0, m = 0, s = 0, c = 0
+    h = Number(prompt('Ingrese la hora'))
+    m = Number(prompt('Ingrese los minutos'))
+    s = Number(prompt('Ingrese los segundos'))
+    
+    s = s + 1
+    if (s == 60) {
+        s = 0
+        m = m + 1
+        if (m == 60) {
+            m = 0;
+            h = h + 1
+            if (h == 24) {
+                h = 0
+            }
+        }
+    }
+
+    document.write(h, ':', m, ':', s)
+    console.log(h, ':', m, ':', s)
+    
+    
+</script>

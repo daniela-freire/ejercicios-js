@@ -1,0 +1,25 @@
+<script>
+    function aleatorio(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    } 
+    function rango(distancia) {
+      return Math.ceil(distancia / 100);
+    }
+    
+    function tiempo(rango) {
+      var tiempos = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181];
+      return tiempos[rango - 1];
+    }
+    
+    var distancia = aleatorio(0, 2000);
+    var rango = rango(distancia);
+    
+    var tiempo = tiempo(rango);
+    
+    var resultado = document.createElement("p");
+    resultado.innerHTML = `La distancia entre el origen y el destino es de ${distancia} km. <br>`;
+    resultado.innerHTML += `El rango al que pertenece la distancia es el ${rango}. <br>`;
+    resultado.innerHTML += `El tiempo estimado de entrega es de ${tiempo} días.`;
+    document.body.appendChild(resultado);
+    </script>
+    

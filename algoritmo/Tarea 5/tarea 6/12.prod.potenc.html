@@ -1,0 +1,30 @@
+<script>
+
+    // Desarrolle un Algoritmo que lee dos números enteros A y B, imprimir el producto (A * B) y
+    // potencia (𝐴 𝐵) utilizando suma y multiplicación sucesiva.
+
+    let a = Number(prompt('Ingrese el valor de A'))
+    let b = Number(prompt('Ingrese el valor de B'))
+    let producto = 0
+    let suma_sucesiva = 0
+    let mult_sucesiva = 1
+    let i = 0
+    let i2 = 0
+    producto = a * b
+    while (i < b) {
+        suma_sucesiva = suma_sucesiva + a
+        i++
+    }
+    while (i2 < b) {
+        mult_sucesiva = mult_sucesiva * a
+        i2++
+    }
+    console.log(suma_sucesiva)
+    document.write('Suma sucesiva: ', suma_sucesiva, '<br>')
+    console.log(producto)
+    document.write('Producto: ',producto, '<br>')
+    console.log(mult_sucesiva)
+    document.write('Multiplicación Sucesiva: ',mult_sucesiva,'<br>' )
+
+
+</script>

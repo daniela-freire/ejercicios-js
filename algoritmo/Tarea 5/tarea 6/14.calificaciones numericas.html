@@ -1,0 +1,38 @@
+<script>
+    // Desarrolle un algoritmo que permita convertir calificaciones numéricas, según la siguiente 
+    //tabla:  
+    //1. A = 19 y 20          SOBRESALIENTE 
+    //2. B = 16, 17 y 18      MUY BUENO 
+    //3. C = 13, 14 y 15      BUENO 
+    //4. D = 10, 11 y 12      REGULAR 
+    //5. E = 1 hasta el 9.    DEFICIENTE 
+    //Se asume que la nota está comprendida entre 1 y 20.  
+
+    //
+    let calificacion = Number(prompt('Ingrese la calificación (entre 1 y 20)'));
+
+    if (calificacion >= 19 && calificacion <= 20) {
+        document.write('Calificación: ', calificacion, ' - SOBRESALIENTE');
+        console.log('Calificación: ', calificacion, ' - SOBRESALIENTE');
+    
+    } else if (calificacion >= 16 && calificacion <= 18) {
+        document.write('Calificación: ', calificacion, ' - MUY BUENO');
+        console.log('Calificación: ', calificacion, ' - MUY BUENO');
+    
+    } else if (calificacion >= 13 && calificacion <= 15) {
+        document.write('Calificación: ', calificacion, ' - BUENO');
+        console.log('Calificación: ', calificacion, ' - BUENO');
+    
+    } else if (calificacion >= 10 && calificacion <= 12) {
+        document.write('Calificación: ', calificacion, ' - REGULAR');
+        console.log('Calificación: ', calificacion, ' - REGULAR');
+    
+    } else if (calificacion >= 1 && calificacion <= 9) {
+        document.write('Calificación: ', calificacion, ' - DEFICIENTE');
+        console.log('Calificación: ', calificacion, ' - DEFICIENTE');
+    
+    } else {
+        document.write('La calificación ingresada no es válida.');
+        console.log('La calificación ingresada no es válida.');
+    }
+</script>

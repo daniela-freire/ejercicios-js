@@ -1,0 +1,26 @@
+<script>
+
+    // Realizar un algoritmo que imprima los N primeros primos además la suma y promedio de ellos.
+
+    let num, i = 0
+    let c = 2
+    let suma = 0
+    let prom = 0
+    num = Number(prompt('ingrese un numero'))
+    while (i < num) {
+        while (num % c != 0) {
+           c++ 
+        }
+        if (c == num) {
+            document.write(num, ' es primo')
+            console.log(num, ' es primo')
+            
+            console.log(suma)
+            console.log(prom)
+        } else {
+            document.write(num, ' No es primo')
+            console.log(num, ' No es primo')
+        }
+        i++
+    }
+</script>

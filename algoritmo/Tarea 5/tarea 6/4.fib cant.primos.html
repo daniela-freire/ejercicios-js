@@ -1,0 +1,42 @@
+
+    <script>
+
+// Realizar un algoritmo que presente los 10 primeros números Fibonacci y cuente cuántos números
+// primos hay.
+
+let a = 0
+let b = 1
+let c = 0
+let cont = 0
+let i = 0
+
+console.log("Los primeros 10 números de Fibonacci son:");
+
+while (i < 10) {
+    console.log(b)
+    c = a + b
+    a = b
+    b = c
+    i++
+}
+
+console.log("Contando los números primos:")
+
+i = 2
+while (i <= b) {
+    let j = 2
+    let es_pri = 1
+    while (j < i) {
+        if (i % j == 0) {
+            es_pri = 0
+            break
+        }
+        j++
+    }
+    cont += es_pri
+    i++
+}
+
+console.log('Hay ${cont} números primos entre 0 y ${b}.')
+document.write('Hay ${cont} números primos entre 0 y ${b}.')
+</script>
